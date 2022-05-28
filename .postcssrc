@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-apply": {},
+    "postcss-atroot": {},
+    "postcss-import": {},
+    "postcss-extend-rule": {},
+    "postcss-nested": {},
+    "tailwindcss": {},
+    "cssnano": {}
+  }
+}

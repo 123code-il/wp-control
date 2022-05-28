@@ -1,7 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [],
+  content: ["./src/**/*.{css,html,js}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')()
+  ],
 }

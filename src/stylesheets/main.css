@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, input[type="text"] {
+  @apply font-mono;
+}
+
+#options-page,
+#footer {
+  @apply container;
+  @apply mx-auto;
+  @apply py-10;
+}
+
+#options-page {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-between;
+}
+
+#footer {
+  @apply mt-auto;
+  @apply text-base;
+  @apply text-center;
+
+  a {
+    @apply font-semibold;
+    @apply underline;
+  }
+}
+
+.page--title {
+  @apply font-semibold;
+  @apply leading-tight;
+  @apply text-4xl;
+}
+.page--description {
+  @apply mt-4;
+  @apply text-lg;
+}
+
+/* https://codepen.io/superfly/pen/wvvPLZB */
+.page--table {
+  @apply leading-normal;
+  @apply min-w-full;
+  @apply mt-8;
+
+  th {
+    @apply bg-gray-100;
+    @apply border-b-2;
+    @apply border-gray-200;
+    @apply font-semibold;
+    @apply px-5;
+    @apply py-3;
+    @apply text-gray-700;
+    @apply text-left;
+    @apply text-xs;
+    @apply tracking-wider;
+    @apply uppercase;
+  }
+
+  td {
+    @apply bg-white;
+    @apply border-b;
+    @apply border-gray-200;
+    @apply px-5;
+    @apply py-5;
+    @apply text-sm;
+    @apply whitespace-nowrap;
+
+    input[type='text'] {
+      @apply w-full;
+    }
+
+    a[class$="-link"] {
+      @apply hover:underline;
+    }
+
+    .edit-link {
+      @apply text-yellow-500;
+    }
+
+    .delete-link {
+      @apply text-gray-500;
+    }
+
+    .add-link,
+    .done-link {
+      @apply text-lime-500;
+    }
+  }
+}
