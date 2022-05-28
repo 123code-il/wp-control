@@ -6,19 +6,22 @@
   "manifest_version": 3,
   "action": {
     "default_title": "WP Control is Awesome!",
-    "default_popup": "src/views/popup.html",
+    "default_popup": "views/popup.html",
     "default_icon": {
-      "16": "src/images/wordpress.logo.png",
-      "32": "src/images/wordpress.logo.png",
-      "48": "src/images/wordpress.logo.png",
-      "128": "src/images/wordpress.logo.png"
+      "16": "images/wordpress.logo.png",
+      "32": "images/wordpress.logo.png",
+      "48": "images/wordpress.logo.png",
+      "128": "images/wordpress.logo.png"
     }
   },
-  "options_page": "src/views/options.html",
+  "options_ui": {
+    "page": "views/options.html",
+    "open_in_tab": true
+  },
   "content_scripts": [
   ],
   "background": {
-    "service_worker": "src/javascripts/background.js"
+    "service_worker": "javascripts/background.js"
   },
   "permissions": [
     "tabs",
@@ -30,9 +33,9 @@
     "http://*/*"
   ],
   "icons": {
-    "16": "src/images/wordpress.logo.png",
-    "32": "src/images/wordpress.logo.png",
-    "48": "src/images/wordpress.logo.png",
-    "128": "src/images/wordpress.logo.png"
+    "16": "images/wordpress.logo.png",
+    "32": "images/wordpress.logo.png",
+    "48": "images/wordpress.logo.png",
+    "128": "images/wordpress.logo.png"
   }
 }
