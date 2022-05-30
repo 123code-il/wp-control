@@ -5,7 +5,7 @@
     "postcss-import": {},
     "postcss-extend-rule": {},
     "postcss-nested": {},
-    "tailwindcss": {},
-    "cssnano": {}
+    "cssnano": {},
+    "tailwindcss": {}
   }
 }

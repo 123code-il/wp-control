@@ -1,13 +1,16 @@
 <!DOCTYPE html><html><head>
-  <link rel="stylesheet" href="../stylesheets/main.css">
+  <meta charset="utf-8">
   <title>WP Control > Options</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'; object-src 'self'">
+  <link rel="stylesheet" href="../stylesheets/main.css">
+  <script type="module" src="/src/javascripts/application.js"></script>
 </head><body>
 
 <div id="options-page">
   <h1 class="page--title">WP Control > Options</h1>
   <p class="page--description">Helps you navigate between all your WordPress websites.</p>
 
-  <table class="page--table" data-controller="sites">
+  <table id="sites-table" class="page--table" data-controller="sites">
     <thead>
       <tr>
         <th>ID</th>
@@ -17,49 +20,9 @@
         <th>Actions</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Development</td>
-        <td>https://blog.scholarshipowl.dock</td>
-        <td>/wp-admin-login-page</td>
-        <td><a href="#1" class="edit-link">Edit</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Staging</td>
-        <td>https://blog.scholarshipowl.tech</td>
-        <td>/wp-admin-login-page</td>
-        <td><a href="#2" class="edit-link">Edit</a></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Production</td>
-        <td>https://scholarshipowl.com/blog</td>
-        <td>/wp-admin-login-page</td>
-        <td>
-          <a href="#3" class="done-link">Done</a>
-          <a href="#3" class="delete-link">Delete</a>
-        </td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td>+</td>
-        <td>
-          <input data-sites-target="label" type="text" value="Staging">
-        </td>
-        <td>
-          <input data-sites-target="url" type="text" value="https://scholarshipowl.com/blog">
-        </td>
-        <td>
-          <input data-sites-target="wp_admin_path" type="text" placeholder="/wp-admin" value="/wp-admin-login-page">
-        </td>
-        <td>
-          <a href="#3" class="add-link" data-action="click->sites#add">Add</a>
-        </td>
-      </tr>
-    </tfoot>
+
+    <tbody></tbody>
+    <tfoot></tfoot>
   </table>
 </div>
 
@@ -68,3 +31,23 @@
 </footer>
 
 </body></html>
+
+
+
+{# <tr>
+  <td>3</td>
+  <td>Production</td>
+  <td>https://scholarshipowl.com/blog</td>
+  <td>/wp-admin-login-page</td>
+  <td>
+    <a href="#3" class="done-link">Done</a>
+    <a href="#3" class="delete-link">Delete</a>
+  </td>
+</tr> #}
+
+{# <button class="edit-link" type="button" data-action="click->sites#edit" value="{{ id }}">
+  Edit
+</button>
+<button class="remove-link" type="button" data-action="click->sites#remove" value="{{ id }}">
+  Remove
+</button> #}

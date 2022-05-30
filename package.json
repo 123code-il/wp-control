@@ -6,15 +6,18 @@
   "author": "Idan Goldman <idan@123code.co>",
   "license": "MIT",
   "scripts": {
-    "watch": "parcel watch ./src/manifest.json --dist-dir=.dist --host localhost --config @parcel/config-webextension",
-    "build": "parcel build ./src/manifest.json --dist-dir=.dist --config @parcel/config-webextension"
+    "watch": "rm -fr .dist && export NODE_ENV=development && parcel watch ./src/manifest.json --dist-dir=.dist --host localhost --config @parcel/config-webextension",
+    "build": "rm -fr .dist && export NODE_ENV=development && parcel build ./src/manifest.json --dist-dir=.dist --config @parcel/config-webextension"
   },
   "devDependencies": {
     "@hotwired/stimulus": "^3.0.1",
     "@parcel/config-webextension": "^2.6.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
+    "chokidar": "^3.5.3",
     "cssnano": "^5.1.9",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
     "parcel": "^2.6.0",
     "postcss": "^8.2.15",
     "postcss-apply": "^0.12.0",

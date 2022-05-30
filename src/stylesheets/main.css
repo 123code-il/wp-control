@@ -74,7 +74,7 @@ body, input[type="text"] {
       @apply w-full;
     }
 
-    a[class$="-link"] {
+    button[class$="-link"] {
       @apply hover:underline;
     }
 
@@ -82,7 +82,7 @@ body, input[type="text"] {
       @apply text-yellow-500;
     }
 
-    .delete-link {
+    .remove-link {
       @apply text-gray-500;
     }
 
