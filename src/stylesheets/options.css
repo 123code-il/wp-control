@@ -1,10 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body, input[type="text"] {
-  @apply font-mono;
-}
+@import 'general';
 
 #options-page,
 #footer {
