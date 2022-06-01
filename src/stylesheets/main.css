@@ -74,20 +74,24 @@ body, input[type="text"] {
       @apply w-full;
     }
 
-    button[class$="-link"] {
+    a {
+      @apply text-blue-500;
+    }
+
+    a, button[class$="-btn"] {
       @apply hover:underline;
     }
 
-    .edit-link {
+    .edit-btn {
       @apply text-yellow-500;
     }
 
-    .remove-link {
+    .remove-btn {
       @apply text-gray-500;
     }
 
-    .add-link,
-    .done-link {
+    .add-btn,
+    .done-btn {
       @apply text-lime-500;
     }
   }
