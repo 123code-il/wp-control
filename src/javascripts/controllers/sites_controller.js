@@ -18,11 +18,10 @@ export default class extends Controller {
 
   async connect() {
     // await chrome.storage.sync.clear();
+    // console.log('init:', this.storage.sites);
+
     await this.#set_sites();
     this.#render();
-    console.log('init:', this.storage.sites);
-
-    jQuery('#sites-table tfoot').html(SITE_ADD_TPL);
   }
 
   async add() {
@@ -47,10 +46,11 @@ export default class extends Controller {
     this.#render('edit', siteId);
   }
 
-  async done(event) {
+  async update(event) {
     const siteId = parseInt( event.target.value );
+    const siteIndex = this.#findSiteIndex(siteId);
 
-    this.storage.sites[siteId] = {
+    this.storage.sites[siteIndex] = {
       id: siteId,
       label: this.labelTarget.value,
       url: this.urlTarget.value,
@@ -58,13 +58,12 @@ export default class extends Controller {
     };
 
     await chrome.storage.sync.set({ sites: this.storage.sites });
-
     this.#render();
   }
 
   async remove(event) {
     const siteId = parseInt( event.target.value );
-    const removeId = findIndex( this.storage.sites, { id: siteId });
+    const removeId = this.#findSiteIndex(siteId);
 
     this.storage.sites.splice(removeId, 1);
     await chrome.storage.sync.set({ sites: this.storage.sites });
@@ -73,8 +72,6 @@ export default class extends Controller {
   }
 
   async #set_sites( site = null ) {
-    console.log('site:', site);
-
     if (site) {
       this.storage.sites.push(site);
       await chrome.storage.sync.set({ sites: this.storage.sites });
@@ -92,6 +89,10 @@ export default class extends Controller {
     return ( this.storage.sites.length ? last( this.storage.sites ).id : 0 ) + 1;
   }
 
+  #findSiteIndex(siteId) {
+    return findIndex( this.storage.sites, { id: siteId });
+  }
+
   #render( action, siteId = 0 ) {
     const $sitesTable = jQuery('#sites-table tbody');
     const $addSites   = jQuery('#sites-table tfoot');
@@ -99,19 +100,14 @@ export default class extends Controller {
     $sitesTable.empty();
     $addSites.empty();
 
-    if ( ! this.storage.sites.length ) {
-      return false;
-    }
-
-    const sites = this.storage.sites;
+    const sites = this.storage.sites || [];
     const siteRows = [];
     let editMode = false;
 
     for ( let [siteIndex, site] of sites.entries() ) {
-      console.log(siteIndex, site);
       let siteRow = '';
 
-      if ( action == 'edit' && siteId == siteIndex ) {
+      if ( action == 'edit' && siteId == site.id ) {
         editMode = true;
 
         siteRow = SITE_EDIT_TPL
@@ -133,7 +129,10 @@ export default class extends Controller {
     }
 
     $sitesTable.html(siteRows);
-    $addSites.html(SITE_ADD_TPL);
+
+    if ( ! editMode || ! this.storage.sites.length ) {
+      $addSites.html(SITE_ADD_TPL);
+    }
   }
 
   #renderActions( action = '', siteId ) {
@@ -141,8 +140,8 @@ export default class extends Controller {
       case 'edit':
         return [
           ACTION_TPL
-            .replace(/{{ action }}/g, 'done')
-            .replace(/{{ actionText }}/g, 'Done')
+            .replace(/{{ action }}/g, 'update')
+            .replace(/{{ actionText }}/g, 'Update')
             .replace(/{{ siteId }}/g, siteId),
           ACTION_TPL
             .replace(/{{ action }}/g, 'remove')

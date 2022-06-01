@@ -91,7 +91,7 @@ body, input[type="text"] {
     }
 
     .add-btn,
-    .done-btn {
+    .update-btn {
       @apply text-lime-500;
     }
   }
