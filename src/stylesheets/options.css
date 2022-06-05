@@ -25,16 +25,6 @@
   }
 }
 
-.page--title {
-  @apply font-semibold;
-  @apply leading-tight;
-  @apply text-4xl;
-}
-.page--description {
-  @apply mt-4;
-  @apply text-lg;
-}
-
 /* https://codepen.io/superfly/pen/wvvPLZB */
 .page--table {
   @apply leading-normal;
