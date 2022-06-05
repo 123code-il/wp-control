@@ -7,7 +7,7 @@ import {
   SITE_ADD_TPL,
   SITE_EDIT_TPL,
   ACTION_TPL
-} from '~/src/javascripts/templates/sites_templates';
+} from '~/src/javascripts/templates/table_templates';
 
 export default class extends Controller {
   static targets = [
