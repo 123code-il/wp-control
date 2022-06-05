@@ -1,22 +1,23 @@
-@import url('//fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('//fonts.googleapis.com/css2?family=&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* @import url('//developer.wordpress.org/wp-includes/css/dashicons.min.css'); */
+@charset "UTF-8";
+
+@import "https://developer.wordpress.org/wp-includes/css/dashicons.min.css";
+@import "@fontsource/roboto/latin-ext";
+@import "@fontsource/roboto-mono/latin-ext";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body, input[type="text"] {
-  /* @apply bg-screen; */
+  @apply bg-screen;
   @apply font-sans;
   @apply tracking-wider;
 }
 
-
 .page--title,
 .page--description {
-    @apply text-center;
-    @apply select-none;
+  @apply text-center;
+  @apply select-none;
 }
 
 .page--title {

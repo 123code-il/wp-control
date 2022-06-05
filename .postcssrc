@@ -1,8 +1,13 @@
 {
   "plugins": {
+    "postcss-import": {},
+    "postcss-import-url": {
+      "modernBrowser": true,
+      "resolveUrls": true
+    },
+    "postcss-url": {},
     "postcss-apply": {},
     "postcss-atroot": {},
-    "postcss-import": {},
     "postcss-extend-rule": {},
     "postcss-nested": {},
     "cssnano": {},
