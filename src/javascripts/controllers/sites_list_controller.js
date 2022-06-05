@@ -18,12 +18,10 @@ export default class extends Controller {
   #render() {
     const sites = sortBy( this.storage.sites, (site) => site.label );
     const siteRows = [];
-    console.log('init:', this.storage.sites);
 
     this.$el.empty();
 
     for ( const site of sites ) {
-      console.log(this.#favicon_retrieve( site.url ));
       const siteRow = LIST_ITEM_TPL
         .replace( /{{ favicon }}/g, this.#favicon_retrieve( site.url ) )
         .replace( /{{ label }}/g, site.label )
