@@ -6,12 +6,21 @@
 </head><body>
 
 <div id="popup-page">
-  <h1 class="page--title">WP Control</h1>
-  <p class="page--description">Helps navigate between all your WP sites.</p>
+  <h1 class="page--title">
+    WP Control
+  </h1>
+
+  <p class="page--description">
+    Helps navigate between all your WP sites.
+  </p>
 
   <div id="sites-list" class="page--list" data-controller="sites_list">
     <ul></ul>
   </div>
+
+  <button class="create-site" type="button" data-controller="sites" data-action="click->sites#create">
+    <object data="/src/images/plus.svg" title="Create Site"></object>
+  </button>
 </div>
 
 </body></html>

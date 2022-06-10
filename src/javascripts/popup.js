@@ -1,5 +1,7 @@
 import { Application } from '@hotwired/stimulus';
-import Controller from '~/src/javascripts/controllers/sites_list_controller';
+import SitesListController from '~/src/javascripts/controllers/sites_list_controller';
+import SitesController from '~/src/javascripts/controllers/sites_controller';
 
 window.Stimulus = Application.start();
-Stimulus.register("sites_list", Controller);
+Stimulus.register("sites_list", SitesListController);
+Stimulus.register("sites", SitesController);

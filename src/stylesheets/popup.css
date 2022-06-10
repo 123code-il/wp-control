@@ -29,11 +29,11 @@
   }
 
   .favicon {
+    @apply bg-shade;
+    @apply flex-shrink-0;
     @apply flex;
     @apply items-center;
     @apply justify-center;
-    @apply flex-shrink-0;
-    @apply bg-shade;
     @apply select-none;
 
     height: 60px;
@@ -79,14 +79,44 @@
   }
 
   .actions a {
-    @apply bg-green;
+    @apply bg-shade hover:bg-green;
     @apply flex;
     @apply items-center;
     @apply justify-center;
     @apply ml-2;
 
-    width: 44px;
-    height: 44px;
     border-radius: 100px;
+    height: 44px;
+    width: 44px;
+  }
+}
+
+.create-site {
+  @apply bg-shade hover:bg-green;
+
+  border-radius: 100px;
+  height: 64px;
+  width: 64px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+  }
+
+  object {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    z-index: 20;
   }
 }
