@@ -24,4 +24,4 @@ export const LIST_ITEM_TPL = `
       </a>
     </div>
   </li>
-`;
+`

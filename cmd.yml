@@ -16,3 +16,9 @@ build:
   - cmd clean
   - export NODE_ENV=production
   - parcel build ./src/manifest.json --dist-dir=.dist --config @parcel/config-webextension
+
+eslint:
+  - eslint src/javascripts/**/*.js
+
+eslint-fix:
+  - eslint --fix src/javascripts/**/*.js

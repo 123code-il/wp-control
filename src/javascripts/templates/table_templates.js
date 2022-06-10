@@ -6,7 +6,7 @@ export const SITE_TPL = `
     <td><a class="link" href="{{ url }}{{ wpAdminPath }}" target="_blank">{{ wpAdminPath }}</a></td>
     <td>{{ actions }}</td>
   </tr>
-`;
+`
 
 export const SITE_ADD_TPL = `
   <tr>
@@ -24,7 +24,7 @@ export const SITE_ADD_TPL = `
       <button type="button" class="add-btn" data-action="click->sites_table#add">Add</button>
     </td>
   </tr>
-`;
+`
 
 export const SITE_EDIT_TPL = `
   <tr>
@@ -42,10 +42,10 @@ export const SITE_EDIT_TPL = `
       {{ actions }}
     </td>
   </tr>
-`;
+`
 
 export const ACTION_TPL = `
   <button class="{{ action }}-btn" type="button" data-action="click->sites_table#{{ action }}" value="{{ siteId }}">
     {{ actionText }}
   </button>
-`;
+`
