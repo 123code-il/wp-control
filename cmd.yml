@@ -5,7 +5,6 @@ install:
 clean:
   - rm -fr .dist
   - mkdir -p .dist
-  - cp /node_modules/nunjucks/browser/nunjucks-slim.min.js .dist
 
 build:
   - cmd clean
