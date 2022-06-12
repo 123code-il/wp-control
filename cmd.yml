@@ -7,15 +7,15 @@ clean:
   - mkdir -p .dist
   - cp /node_modules/nunjucks/browser/nunjucks-slim.min.js .dist
 
-watch:
-  - cmd clean
-  - export NODE_ENV=development
-  - parcel watch ./src/manifest.json --dist-dir=.dist --host localhost --config @parcel/config-webextension
-
 build:
   - cmd clean
   - export NODE_ENV=production
   - parcel build ./src/manifest.json --dist-dir=.dist --config @parcel/config-webextension
+
+watch:
+  - cmd clean
+  - export NODE_ENV=development
+  - parcel watch ./src/manifest.json --dist-dir=.dist --host localhost --config @parcel/config-webextension
 
 eslint:
   - eslint src/javascripts/**/*.js

@@ -5,22 +5,20 @@
   <script type="module" src="/src/javascripts/popup.js"></script>
 </head><body>
 
-<div id="popup-page">
-  <h1 class="page--title">
-    WP Control
-  </h1>
+  <div id="popup-page">
+    <header id="display">
+      <h1 class="page--title">
+        WP Control
+      </h1>
 
-  <p class="page--description">
-    Helps navigate between all your WP sites.
-  </p>
+      <p class="page--description">
+        Helps navigate between all your WP sites.
+      </p>
+    </header>
 
-  <div id="sites-list" class="page--list" data-controller="sites_list">
-    <ul></ul>
+    <main id="show">
+
+    </main>
   </div>
-
-  <button class="create-site" type="button" data-controller="sites" data-action="click->sites#create">
-    <object data="/src/images/plus.svg" title="Create Site"></object>
-  </button>
-</div>
 
 </body></html>
