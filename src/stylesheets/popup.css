@@ -7,7 +7,6 @@
   width: 420px;
 }
 
-
 .page--title {
   @apply pb-1;
 }
@@ -94,14 +93,14 @@
 .create-site {
   @apply bg-shade hover:bg-green;
 
-  border-radius: 100px;
-  height: 64px;
-  width: 64px;
-  margin: 20px auto;
-  display: flex;
   align-items: center;
+  border-radius: 100px;
+  display: flex;
+  height: 64px;
   justify-content: center;
+  margin: 20px auto;
   position: relative;
+  width: 64px;
   z-index: 10;
 
   &::after {
@@ -115,8 +114,8 @@
 
   object {
     height: 24px;
-    width: 24px;
     position: relative;
+    width: 24px;
     z-index: 20;
   }
 }
