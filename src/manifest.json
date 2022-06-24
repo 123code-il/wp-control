@@ -4,7 +4,6 @@
   "homepage_url": "https://github.com/123code-il/wp-control",
 
   "version": "0.2.0",
-  "default_locale": "en",
   "manifest_version": 3,
 
   "action": {

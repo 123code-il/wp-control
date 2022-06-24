@@ -6,31 +6,36 @@
   "author": "Idan Goldman <idan@123code.co>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -fr .dist && export NODE_ENV=development && mkdir -p .dist && parcel build ./src/manifest.json --dist-dir=.dist --config @parcel/config-webextension",
+    "build": "rm -fr .dist && export NODE_ENV=development && mkdir -p .dist && parcel build ./src/manifest.json --dist-dir=.dist",
     "eslint:fix": "eslint --fix src/javascripts/**/*.js",
     "eslint": "eslint src/javascripts/**/*.js",
-    "watch": "rm -fr .dist && export NODE_ENV=development && mkdir -p .dist && parcel watch ./src/manifest.json --dist-dir=.dist --host localhost --config @parcel/config-webextension"
+    "watch": "rm -fr .dist && export NODE_ENV=development && mkdir -p .dist && parcel watch ./src/manifest.json --dist-dir=.dist --host localhost"
   },
+  "parcelIgnore": [
+    "{{.*}}"
+  ],
   "devDependencies": {
     "@fontsource/roboto": "^4.5.7",
     "@fontsource/roboto-mono": "^4.5.7",
     "@hotwired/stimulus": "^3.0.1",
-    "@parcel/compressor-gzip": "^2.6.0",
-    "@parcel/config-webextension": "^2.6.0",
+    "@parcel/compressor-gzip": "^2.6.2",
+    "@parcel/config-webextension": "^2.6.2",
+    "@parcel/transformer-inline-string": "2.6.2",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.2",
     "add": "^2.0.6",
     "chokidar": "^3.5.3",
-    "cssnano": "^5.1.11",
-    "eslint": "^8.0.1",
+    "cssnano": "^5.1.12",
+    "eslint": "^8.18.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-promise": "^6.0.0",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.3",
-    "parcel": "^2.6.0",
+    "parcel": "^2.6.2",
+    "parcel-resolver-ignore": "^2.1.1",
     "postcss": "^8.4.14",
     "postcss-apply": "^0.12.0",
     "postcss-atroot": "^0.2.3",
@@ -39,7 +44,7 @@
     "postcss-import-url": "^7.0.0",
     "postcss-url": "^10.1.3",
     "process": "^0.11.10",
-    "tailwindcss": "^3.0.24",
-    "yarn": "^1.22.18"
+    "tailwindcss": "^3.1.4",
+    "yarn": "^1.22.19"
   }
 }
