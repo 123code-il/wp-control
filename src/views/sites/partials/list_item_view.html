@@ -1,4 +1,4 @@
-<li class="list-item">
+<li class="list-item" data-action="click->sites#edit" data-id="{{ siteId }}">
   <div class="favicon">
     <img src="{{ favicon }}" alt="{{ label }}" />
   </div>
@@ -14,11 +14,11 @@
   </article>
 
   <div class="actions">
-    <a href="{{ url }}" class="site" target="_blank" title="Site">
+    <a href="{{ url }}" class="site" target="_blank" title="Site" >
       <span class="dashicons dashicons-admin-site"></span>
     </a>
 
-    <a href="{{ url_admin }}" class="admin" target="_blank" title="Admin">
+    <a href="{{ urlAdmin }}" class="admin" target="_blank" title="Admin">
       <span class="dashicons dashicons-dashboard"></span>
     </a>
   </div>
