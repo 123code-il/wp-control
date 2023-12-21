@@ -8,7 +8,7 @@
 
   "action": {
     "default_title": "WP Control is Awesome!",
-    "default_popup": "views/popup.html"
+    "default_popup": "views/index_view.html"
   },
 
   "icons": {

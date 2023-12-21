@@ -1,23 +1,27 @@
 install:
-  - rm -fr .dist .parcel-cache node_modules yarn.lock
+  - cmd clean
   - yarn install
 
 clean:
-  - rm -fr .dist
+  - rm -fr .dist .parcel-cache node_modules yarn.lock
   - mkdir -p .dist
 
 build:
-  - cmd clean
-  - export NODE_ENV=production
-  - parcel build ./src/manifest.json --dist-dir=.dist
+  export:
+    NODE_ENV: production
+  commands:
+    - cmd clean
+    - parcel build ./src/manifest.json --dist-dir=.dist
 
 watch:
-  - cmd clean
-  - export NODE_ENV=development
-  - parcel watch ./src/manifest.json --dist-dir=.dist --host localhost
+  export:
+    NODE_ENV: development
+  commands:
+    - cmd clean
+    - parcel watch ./src/manifest.json --dist-dir=.dist --host localhost
 
 eslint:
   - eslint src/javascripts/**/*.js
 
-eslint-fix:
+eslint_fix:
   - eslint --fix src/javascripts/**/*.js
