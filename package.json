@@ -6,8 +6,8 @@
   "author": "Idan Goldman <idan@123code.co>",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -frv .dist .parcel-cache node_modules pnpm-lock.yaml",
-    "watch": "rm -frv .dist && parcel watch ./src/manifest.json --dist-dir=.dist --host localhost"
+    "clean": "rm -frv dist .parcel-cache node_modules pnpm-lock.yaml",
+    "dev": "rm -frv dist && parcel watch src/manifest.json --no-hmr --dist-dir dist --host localhost --port 1234"
   },
   "engines": {
     "node": ">=20.10.0",
@@ -16,6 +16,9 @@
   "parcelIgnore": [
     "{{.*}}"
   ],
+  "imports": {
+    "~/*": "./*"
+  },
   "devDependencies": {
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/roboto-mono": "^5.0.16",
@@ -39,6 +42,7 @@
     "postcss-extend-rule": "^4.0.0",
     "postcss-import": "^15.1.0",
     "postcss-import-url": "^7.2.0",
+    "postcss-nested": "^6.0.1",
     "postcss-url": "^10.1.3",
     "posthtml": "^0.16.6",
     "posthtml-doctype": "^1.1.1",

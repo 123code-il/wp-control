@@ -71,6 +71,9 @@ devDependencies:
   postcss-import-url:
     specifier: ^7.2.0
     version: 7.2.0(postcss@8.4.32)
+  postcss-nested:
+    specifier: ^6.0.1
+    version: 6.0.1(postcss@8.4.32)
   postcss-url:
     specifier: ^10.1.3
     version: 10.1.3(postcss@8.4.32)
