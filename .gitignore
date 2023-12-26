@@ -3,10 +3,9 @@ logs
 npm-debug.log*
 node_modules
 .npm
-.dist
 .idea
 .DS_Store
 .parcel-cache
-dist
+build
 
 !pnpm-lock.yaml

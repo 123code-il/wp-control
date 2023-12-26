@@ -1,7 +1,7 @@
 import { Application } from '@hotwired/stimulus'
 
-import RouterController from '~/src/javascripts/controllers/router_controller'
-import SitesController from '~/src/javascripts/controllers/sites_controller'
+import RouterController from '~/src/javascripts/controllers/router'
+import SitesController from '~/src/javascripts/controllers/sites'
 
 const Stimulus = window.Stimulus = Application.start()
 

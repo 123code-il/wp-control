@@ -6,10 +6,12 @@
   "author": "Idan Goldman <idan@123code.co>",
   "license": "MIT",
   "scripts": {
-    "clean:install": "rm -frv dist node_modules pnpm-lock.yaml",
-    "clean:cache": "rm -frv .parcel-cache dist",
+    "clean:install": "rm -frv build node_modules pnpm-lock.yaml",
+    "clean:cache": "rm -frv .parcel-cache build",
     "clean": "pnpm run clean:install && pnpm run clean:cache",
-    "dev": "pnpm run clean:cache && parcel watch --host localhost"
+    "build:tpl": "cp -frv src/views/templates build",
+    "build:mkdir": "mkdir -vp build/templates",
+    "dev": "pnpm run clean:cache && pnpm run build:mkdir && pnpm run build:tpl && parcel watch --host localhost"
   },
   "engines": {
     "node": ">=20.10.0",
@@ -22,7 +24,7 @@
   "targets": {
     "default": {
       "source": "src/manifest.json",
-      "distDir": "dist",
+      "distDir": "build",
       "scopeHoist": false,
       "includeNodeModules": true
     }
