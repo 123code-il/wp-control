@@ -1,14 +1,14 @@
-import BaseModel from './base_model'
-import { faviconRetrieve } from "~/src/javascripts/helpers";
+import BaseModel from 'src/javascripts/models/base'
+import Favicon from 'src/javascripts/helpers/favicon'
 
 export default class SiteModel extends BaseModel {
   static defaults () {
     return {
-      id: null,
       favicon: null,
+      id: null,
       label: null,
       url: null,
-      urlAdmin: null
+      urlAdmin: null,
     }
   }
 
@@ -17,7 +17,7 @@ export default class SiteModel extends BaseModel {
   }
 
   get favicon () {
-    return faviconRetrieve( this.url )
+    return new Favicon( this.url );
   }
 
   get urlAdmin () {

@@ -11,7 +11,7 @@
     "clean": "pnpm run clean:install && pnpm run clean:cache",
     "build:tpl": "cp -frv src/views/templates build",
     "build:mkdir": "mkdir -vp build/templates",
-    "dev": "pnpm run clean:cache && pnpm run build:mkdir && pnpm run build:tpl && parcel watch --host localhost"
+    "dev": "pnpm run clean:cache && parcel watch --host localhost --config .parcelrc"
   },
   "engines": {
     "node": ">=20.10.0",
@@ -23,10 +23,23 @@
   },
   "targets": {
     "default": {
-      "source": "src/manifest.json",
       "distDir": "build",
+      "engines": {
+        "browsers": "> 0.5%, last 2 versions, not dead"
+      },
+      "includeNodeModules": true,
+      "publicUrl": "/",
       "scopeHoist": false,
-      "includeNodeModules": true
+      "source": "src/manifest.json"
+    },
+    "templates": {
+      "distDir": "build/templates",
+      "publicUrl": "/templates",
+      "sourceMap": false,
+      "source": [
+        "src/views/templates/sites.html",
+        "src/views/templates/sites_list_item.html"
+      ]
     }
   },
   "parcelIgnore": [

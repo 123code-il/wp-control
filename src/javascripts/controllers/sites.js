@@ -1,6 +1,7 @@
 import { Controller } from '@hotwired/stimulus'
 
-import { renderTemplate } from '~/src/javascripts/helpers'
+import Template from '~/src/javascripts/helpers/template'
+
 // import SiteModel from '~/src/javascripts/models/site'
 
 export default class SitesController extends Controller {
@@ -9,8 +10,8 @@ export default class SitesController extends Controller {
   }
 
   async index () {
-    await renderTemplate( this.element, '/templates/sites' )
-    // await renderTemplate( this.element.querySelector( '.page--list ul' ), '/views/sites/list-item', SiteModel.all )
+    await Template.render( this.element, '/templates/sites' )
+    // await Template.render( this.element.querySelector( '.page--list ul' ), '/templates/sites/list-item', SiteModel.all )
   }
 
   create () {
