@@ -5,12 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@fontsource/roboto':
-    specifier: ^5.0.8
-    version: 5.0.8
-  '@fontsource/roboto-mono':
-    specifier: ^5.0.16
-    version: 5.0.16
   '@hotwired/stimulus':
     specifier: ^3.2.2
     version: 3.2.2
@@ -67,14 +61,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@fontsource/roboto-mono@5.0.16:
-    resolution: {integrity: sha512-unZYfjXts55DQyODz0I9DzbSrS5DRKPNq9crJpNJe/Vy818bLnijprcJv3fvqwdDqTT0dRm2Fhk09QEIdtAc+Q==}
-    dev: true
-
-  /@fontsource/roboto@5.0.8:
-    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
     dev: true
 
   /@hotwired/stimulus@3.2.2:
