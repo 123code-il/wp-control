@@ -36,7 +36,8 @@
       "sourceMap": false,
       "source": [
         "src/views/templates/sites.html",
-        "src/views/templates/sites_list_item.html"
+        "src/views/templates/sites_list_item.html",
+        "src/views/templates/sites_list_item_new.html"
       ]
     }
   },

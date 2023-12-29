@@ -1,9 +1,8 @@
 export default class BaseModel {
-  static defaults () {
-    return {
-      created_at: null,
-      updated_at: null
-    }
+  static #defaults = {
+    id: null,
+    created_at: null,
+    updated_at: null
   }
 
   constructor ( data ) {

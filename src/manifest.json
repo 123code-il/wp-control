@@ -8,9 +8,17 @@
   "homepage_url": "https://github.com/123code-il/wp-control",
   "incognito": "spanning",
 
+  "background": {
+    "service_worker": "javascripts/background.js"
+  },
+
   "action": {
-    "default_title": "WP Control is Awesome!",
-    "default_popup": "views/popup.html"
+    "default_title": "Awesome!"
+  },
+
+  "options_ui": {
+    "page": "views/options.html",
+    "open_in_tab": true
   },
 
   "icons": {

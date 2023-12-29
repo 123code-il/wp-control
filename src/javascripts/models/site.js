@@ -2,14 +2,10 @@ import BaseModel from 'src/javascripts/models/base'
 import Favicon from 'src/javascripts/helpers/favicon'
 
 export default class SiteModel extends BaseModel {
-  static defaults () {
-    return {
-      favicon: null,
-      id: null,
-      label: null,
-      url: null,
-      urlAdmin: null,
-    }
+  static defaults = {
+    favicon: null,
+    label: null,
+    url: null
   }
 
   constructor ( data ) {
@@ -18,9 +14,5 @@ export default class SiteModel extends BaseModel {
 
   get favicon () {
     return new Favicon( this.url );
-  }
-
-  get urlAdmin () {
-    return this.url + this.wpAdminPath
   }
 }
