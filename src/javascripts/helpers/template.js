@@ -1,6 +1,5 @@
 export default class Template {
   static UNUSED_TAGS = [
-    '<!DOCTYPE\s+html>',
     '<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>',
   ].join('|');
   static UNUSED_TAGS_REGEX = new RegExp(`^(${ Template.UNUSED_TAGS })$`, 'gi');
