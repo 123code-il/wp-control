@@ -1,32 +1,23 @@
 <!DOCTYPE html><html><head>
   <meta charset="utf-8">
-  <title>WP Control > Options</title>
-  <link rel="stylesheet" href="/src/stylesheets/options.css">
-  <script type="module" src="/src/javascripts/options.js"></script>
+  <title>Web Pages</title>
+  <link rel="stylesheet" href="~/src/stylesheets/options.scss">
+  <script type="module" src="~/src/javascripts/options.js"></script>
 </head><body>
 
-<div id="options-page">
-  <h1 class="page--title">WP Control > Options</h1>
-  <p class="page--description">Helps you navigate between all your WP sites.</p>
+  <div id="options-page" data-controller="router">
+    <header data-router-target="header">
+      <h1 class="page--title">
+        Web Pages
+      </h1>
 
-  <table id="sites-table" class="page--table" data-controller="sites_table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Label</th>
-        <th>URL</th>
-        <th>WP Admin Path</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
+      <p class="page--description">
+        Helps navigate between all your web sites.
+      </p>
+    </header>
 
-    <tbody></tbody>
-    <tfoot></tfoot>
-  </table>
-</div>
-
-<footer id="footer">
-  Built by <a href="https://123code.co" target="_blank">123Code</a> Studio.
-</footer>
+    <main data-router-target="main">
+    </main>
+  </div>
 
 </body></html>

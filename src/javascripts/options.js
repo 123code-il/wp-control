@@ -1,5 +1,9 @@
-import { Application } from '@hotwired/stimulus';
-import Controller from '~/src/javascripts/controllers/sites_table_controller';
+import { Application } from '@hotwired/stimulus'
 
-window.Stimulus = Application.start();
-Stimulus.register("sites_table", Controller);
+import RouterController from '~/src/javascripts/controllers/router'
+import SitesController from '~/src/javascripts/controllers/sites'
+
+const Stimulus = window.Stimulus = Application.start()
+
+Stimulus.register( 'router', RouterController )
+Stimulus.register( 'sites', SitesController )
